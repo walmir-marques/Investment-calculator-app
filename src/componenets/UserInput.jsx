@@ -9,18 +9,22 @@ export const UserInput = ({ onChange, userInput }) => {
           <input
             type="number"
             required
-            onChange={(e) => onChange("initialInvestment", e.target.value)}
+            onChange={(e) =>
+              onChange("initialInvestment", parseFloat(e.target.value))
+            }
             value={userInput.initialInvestment}
-          ></input>
+          />
         </p>
         <p>
           <label>Investimento Anual</label>
           <input
             type="number"
             required
-            onChange={(e) => onChange("annualInvestment", e.target.value)}
+            onChange={(e) =>
+              onChange("annualInvestment", parseFloat(e.target.value))
+            }
             value={userInput.annualInvestment}
-          ></input>
+          />
         </p>
       </div>
       <div className="input-group">
@@ -29,18 +33,20 @@ export const UserInput = ({ onChange, userInput }) => {
           <input
             type="number"
             required
-            onChange={(e) => onChange("expectedReturn", e.target.value)}
+            onChange={(e) =>
+              onChange("expectedReturn", parseFloat(e.target.value))
+            }
             value={userInput.expectedReturn}
-          ></input>
+          />
         </p>
         <p>
           <label>Duração (Anos)</label>
           <input
             type="number"
             required
-            onChange={(e) => onChange("duration", e.target.value)}
+            onChange={(e) => onChange("duration", parseInt(e.target.value, 10))}
             value={userInput.duration}
-          ></input>
+          />
         </p>
       </div>
     </section>
